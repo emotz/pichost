@@ -1,0 +1,26 @@
+{
+  "name": "pichost",
+  "version": "1.0.0",
+  "description": "NEINSTAGRAMM",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emotz/pichost.git"
+  },
+  "author": "emotz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emotz/pichost/issues"
+  },
+  "homepage": "https://github.com/emotz/pichost#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "sqlite3": "^3.1.8"
+  }
+}
