@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/emotz/pichost#readme",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.15.2",
+    "gm": "^1.23.0",
     "sqlite3": "^3.1.8"
   }
 }
