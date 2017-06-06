@@ -58,17 +58,17 @@
             <div class="masthead">
         <nav> <% if (categories.length) { %>
           <ul class="nav nav-justified"> <% for (let category of categories){ %>
-            <li class="active"><a href="#"><%= category %></a></li><% } %>
+            <li><a href="#"><%= category %></a></li><% } %>
           </ul><% } %>
         </nav>
       </div>
   
 
-      <!-- Example row of columns --><% if (pics.length) {  for (let picture of pics){ %>
-      <div class="row">  <% for (let mpic of picture){ %> 
+      <!-- Example row of columns --><% if (alldata.length) {  for (let row of alldata){ %>
+      <div class="row">  <% for (let mpic of row){ %> 
       <div class="col-md-4">
           <h2 align = "center">Safari bug warning!</h2>
-          <p align = "center"><a href="#"><img src="<%= mpic %>" class="img-circle"></a></p>
+          <p align = "center"><a href="<%= '/posts/' + mpic.id %>"><img src="<%= mpic.mini %>" class="img-circle"></a></p>
         </div><% } %>
       </div><% }  } %>
 

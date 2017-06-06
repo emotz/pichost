@@ -3,7 +3,6 @@ let path = require('path');
 
 
 
-
 function totalresize(dir){
     let alldirectoryfiles = fs.readdirSync(currentdir);
     let filteredfiles = files2resize(alldirectoryfiles);
@@ -24,6 +23,8 @@ function mfilename(file){
     let res = 'm' + file;
     return res;
     }
+// > files2resize("[asdasd.jpg, asdasdwe.png, 1.html, 2.jpg, 6.png]")
+// '[2.jpg, 6.png]'
 
 function files2resize(arr) {
     let res = [];
@@ -43,6 +44,10 @@ function numcheck(str) {
     return (res === str);
 }
 
+
+// > filename("test.jpg")
+// 'test'
+
 function filename(str) {
     let res = '';
     for (let i = 0; i < str.length; i++) {
@@ -51,6 +56,8 @@ function filename(str) {
     }
     return res;
 }
+// > filerazreshenie("test.jpg")
+// 'jpg'
 
 
 function filerazreshenie(str) {
@@ -68,8 +75,29 @@ function reverse(s) {
 
 let currentdir = path.join(__dirname + '/..', '/assets');
 let res = fs.readdirSync(currentdir);
-console.log(res);
-console.log(files2resize(res));
-console.log(mfilename('jopa.adasd'));
-console.log(currentdir);
-totalresize(currentdir);
+//console.log(res);
+//console.log(files2resize(res));
+//console.log(mfilename('jopa.adasd'));
+//console.log(currentdir);
+//totalresize(currentdir);
+
+function buildrenderdata(dir) {
+    let res = [];
+     let alldirectoryfiles = fs.readdirSync(currentdir);
+    let filteredfiles = files2resize(alldirectoryfiles);
+    for (let file of filteredfiles){
+        let fileid = filename(file);
+        let fullsize = file;
+        let mini = 'm'+ file;
+        res.push({"id" : fileid, "fullsize" : fullsize, "mini" : mini });
+    }
+    return res;
+}
+//console.log(buildrenderdata(currentdir));
+
+
+module.exports = {
+    files2resize : files2resize,
+    filename : filename,
+    
+};

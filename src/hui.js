@@ -6,6 +6,9 @@ let renderdata = require('./renderdata.js');
 
 app.get('/', huy);
 
+app.get('/posts/:id', spost);
+
+
 app.get('/:name', jopa);
 
 app.listen(8080, function () {
@@ -27,6 +30,24 @@ function onerror(err) {
 }
 
 
+function spost(req, res) {
+    function onrenderfile(err, result) {
+        // render on success
+        if (!err) {
+         //   console.log(result);
+            res.send(result);
+        }
+        // render or error
+        else {
+            console.log(err);
+        }
+    }
+
+    ejs.renderFile(path.join(__dirname + '/template', '/2.ejs'),
+        {categories: renderdata.categories, picture: renderdata.picture }, onrenderfile);
+    console.log("Got request!");
+}
+
 
 function huy(req, res) {
     function onrenderfile(err, result) {
@@ -42,6 +63,6 @@ function huy(req, res) {
     }
 
     ejs.renderFile(path.join(__dirname + '/template', '/1.ejs'),
-        {categories: renderdata.categories, pics: renderdata.pics }, onrenderfile);
+        {categories: renderdata.categories, alldata: renderdata.alldata }, onrenderfile);
     console.log("Got request!");
 }
