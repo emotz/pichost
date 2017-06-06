@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "doctest --module commonjs src/resizepics.js src/renderdata.js"
+    "test": "doctest --module commonjs"
   },
   "repository": {
     "type": "git",

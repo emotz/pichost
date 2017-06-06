@@ -12,7 +12,12 @@
             "args": [
                 "run",
                 "test",
-                "--silent"
+                "--silent",
+                "--",
+                "${file}",
+                "&",
+                "echo",
+                "Done"
             ]
         }
     ]
