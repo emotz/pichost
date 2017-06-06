@@ -23,8 +23,8 @@ function mfilename(file){
     let res = 'm' + file;
     return res;
     }
-// > files2resize("[asdasd.jpg, asdasdwe.png, 1.html, 2.jpg, 6.png]")
-// '[2.jpg, 6.png]'
+// > files2resize(['asdasd.jpg', 'asdasdwe.png', '1.html', '2.jpg', '6.png'])
+// ["2.jpg", "6.png"]
 
 function files2resize(arr) {
     let res = [];
