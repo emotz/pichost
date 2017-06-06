@@ -12,6 +12,10 @@ let alldata = rowgrp(buildrenderdata());
 //console.log(pics);
 //console.log(picture);
 
+
+
+// >buildrenderdata().length
+// 13
 function buildrenderdata() {
     let res = [];
     let alldirectoryfiles = fs.readdirSync(currentdir);
@@ -39,10 +43,11 @@ function buildpostrenderdata(id) {
 }
 
 
-
+// >rowgrp(buildrenderdata()).length
+// 5
 function rowgrp(arr) {
     res = [];
-    for (let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length;) {
         let n = 0;
         let row = [];
         do {
@@ -56,7 +61,7 @@ function rowgrp(arr) {
     return res;
 }
 
-console.log(buildpostrenderdata('12'));
+console.log(rowgrp(buildrenderdata()));
 
 
 
