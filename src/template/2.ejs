@@ -68,11 +68,11 @@
 
 
         <!-- Example row of columns -->
-        <div class="row"><% if (picture.length) {%> 
+        <div class="row"><% if (postrenderdata) {%> 
             <div class="col-md-12">
                 <h2 align="center">Safari bug warning!</h2>
                 <p align="center">
-                    <a href="#"><img src="<%= picture %>"></a>
+                    <a href="#"><img src="/<%= postrenderdata.fullsize %>"></a>
                 </p>
             </div><% } %>
         </div>
@@ -109,8 +109,7 @@
     <!-- /container -->
 
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+ 
 </body>
 
 </html>

@@ -44,7 +44,7 @@ function spost(req, res) {
     }
 
     ejs.renderFile(path.join(__dirname + '/template', '/2.ejs'),
-        {categories: renderdata.categories, picture: renderdata.picture }, onrenderfile);
+        {categories: renderdata.categories, postrenderdata: renderdata.postrenderdata(req.params.id) }, onrenderfile);
     console.log("Got request!");
 }
 
