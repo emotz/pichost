@@ -70,7 +70,7 @@
         <!-- Example row of columns -->
         <div class="row"><% if (postrenderdata) {%> 
             <div class="col-md-12">
-                <h2 align="center">Safari bug warning!</h2>
+                <h2 align="center"><%= postrenderdata.title %></h2>
                 <p align="center">
                     <a href="#"><img src="/<%= postrenderdata.fullsize %>"></a>
                 </p>
@@ -78,11 +78,11 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <p align="right"><button type="button" class="btn btn-danger">Danger</button>
+                <p align="right"><button type="button" class="btn btn-info">comment</button>
                 </p>
             </div>
             <div class="col-md-6">
-                <p align="left"><button type="button" class="btn btn-danger">Danger</button>
+                <p align="left"><button type="button" class="btn btn-danger">delete comment</button>
                 </p>
             </div>
         </div>

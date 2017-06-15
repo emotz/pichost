@@ -67,7 +67,7 @@
       <!-- Example row of columns --><% if (alldata.length) {  for (let row of alldata){ %>
       <div class="row">  <% for (let mpic of row){ %> 
       <div class="col-md-4">
-          <h2 align = "center">Safari bug warning!</h2>
+          <h2 align = "center"><%= mpic.title%></h2>
           <p align = "center"><a href="<%= '/posts/' + mpic.id %>"><img src="<%= mpic.mini %>" class="img-circle"></a></p>
         </div><% } %>
       </div><% }  } %>

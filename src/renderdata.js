@@ -24,7 +24,8 @@ function buildrenderdata() {
         let fileid = resizepics.filename(file);
         let fullsize = file;
         let mini = 'm' + file;
-        res.push({ "id": fileid, "fullsize": fullsize, "mini": mini });
+        let title = fileid;
+        res.push({ "id": fileid, "fullsize": fullsize, "mini": mini, "title": title });
     }
     return res;
 }
@@ -37,7 +38,8 @@ function buildpostrenderdata(id) {
         let fileid = resizepics.filename(file);
         let fullsize = file;
         let mini = 'm' + file;
-        if (fileid == id) { res = ({ "id": fileid, "fullsize": fullsize, "mini": mini }); }
+        let title = fileid;
+        if (fileid == id) { res = ({ "id": fileid, "fullsize": fullsize, "mini": mini, "title": title }); }
     }
     return res;
 }
